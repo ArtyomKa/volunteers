@@ -19,10 +19,7 @@ function servePage(req, res) {
    res.sendFile(path.join(__dirname, '../src/index.html'));
 }
 
-app.get('/', servePage);
-app.get('/volunteers-list', servePage);
-app.get('/bulk-add', servePage);
-app.get('/shift-manager', servePage);
+app.get(['/', '/volunteers-list', '/bulk-add', '/shift-manager'], servePage);
 
 
 /////////////////////////////
